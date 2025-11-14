@@ -17,10 +17,15 @@ import altair as alt
 from datetime import datetime
 from datetime import time
 import plotly.express as px
-import json
 
 st.header("Exploring Pageviews by Language")
 
+st.subheader("Info About My Research Question")
+st.write("Since we looked at the top 25 languages in the Wikipedia CC articles in our first project, I wanted to see what the pageviews looked like for the 25 least popular languages in that group to see how drastic the difference was between the top 25 and the bottom 25")
+st.write("I am using the data from the pageviews csv file that I sorted, filtered, and loaded to a new csv to make it easier to work with")
+
+
+st.subheader("How this Page Works")
 st.write("Select a language to see the pagviews for wikipedia articles in that language")
 st.write("Click multiple languages to compare data")
 
@@ -80,3 +85,6 @@ fig.update_layout(
 )
 
 st.plotly_chart(fig, use_container_width=True)
+
+st.subheader("This is what the dataframe I used looks like:")
+st.write(df.head())
